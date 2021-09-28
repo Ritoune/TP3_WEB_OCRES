@@ -34,10 +34,10 @@ function start() {
       console.log(data);
 
       // On récupère l'information principal
-      const main = data.weather[0].main;
-      const description = data.weather[0].description;
-      const temp = data.list[1].temp.day;
-      const icon = apiWeather.getHTMLElementFromIcon(data.weather[0].icon);
+      const main = data.list[0].weather[0].main;
+      const description = data.list[0].weather[0].description;
+      const temp = data.list[0].temp.day;
+      const icon = apiWeather.getHTMLElementFromIcon(data.list[0].weather[0].icon);
 
       // Modifier le DOM
       document.getElementById('tomorrow-forecast-main').innerHTML = main;
