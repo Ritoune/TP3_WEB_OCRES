@@ -29,23 +29,10 @@ class API_WEATHER{
   }
 
 
-  fetchTomorrowForecast(){
-    return axios
-    .get(`${API_URL_FORECAST}?q=${this.city}&cnt=2&appid=${API_KEY}`, {
-      crossdomain: true
-    })
-  }
 
-  fetchAfterTomorrowForecast(){
+  fetch3DaysForecast(){
     return axios
     .get(`${API_URL_FORECAST}?q=${this.city}&cnt=3&appid=${API_KEY}`, {
-      crossdomain: true
-    })
-  }
-
-  fetchAfterAfterTomorrowForecast(){
-    return axios
-    .get(`${API_URL_FORECAST}?q=${this.city}&cnt=4&appid=${API_KEY}`, {
       crossdomain: true
     })
   }
